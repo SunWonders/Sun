@@ -1,0 +1,22 @@
+<div style="margin-left: 10px;">    <h4 style="color: #75859d; font-size: 16px;margin-left: 5px;">File Upload</h4>
+    <form method="post" enctype="multipart/form-data">
+        <input style="width: 30%;" type="file" name="file" class="form-control" 
+                     (change)="UploadFile($event)"/>
+        <button style="margin-left: 419px;margin-top: -59px;" type="submit" class="btn btn-info" value="Upload"
+                    id="uploadFile" (click)="onSubmit()">Upload
+        </button>
+        <!-- <button style="margin-top: 10px;margin-left: 5px;" type="button" class="btn btn-info" id="cancel" (click)="Cancel()">
+                    Cancel
+        </button> -->
+    </form>
+
+
+  </div>
+ <div *ngIf="ProgressBar" style="width: 35%;margin-top: 10px;" class="progressbar">
+  <span class="status" [style.animation-delay.s]="-progress"></span>
+  {{ progressPercentage }}% Complete
+</div>
+
+  <div *ngIf="urlVisibility" style="margin-top: 15px;margin-left: 10px;">
+    <a  href="{{shortURL}}"  target="_blank">{{shortURL}}</a>
+  </div>

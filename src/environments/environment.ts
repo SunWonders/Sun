@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  fileUploadURL:'http://api.aeiou.co.in:81/v1/upload',
 };
 
 /*

@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "sun-web"
+  "defaultProject": "sun-web",
+  "cli": {
+    "analytics": "d7c65e37-e3d9-408e-9f65-d64646737ffa"
+  }
 }
