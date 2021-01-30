@@ -13,8 +13,16 @@ export class IndexComponent implements OnInit, OnDestroy {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
+  target:any;
+  shortURL:any;
   constructor() {}
+  UploadFile(data:any){
 
+  }
+
+  onSubmit(){
+    
+  }
   
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });

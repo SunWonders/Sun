@@ -23,6 +23,8 @@ import { IndexComponent } from "./pages/index/index.component";
 import { ProfilepageComponent } from "./pages/examples/profilepage/profilepage.component";
 import { RegisterpageComponent } from "./pages/examples/registerpage/registerpage.component";
 import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent
@@ -44,6 +46,8 @@ import { LandingpageComponent } from "./pages/examples/landingpage/landingpage.c
     // CollapseModule.forRoot(),
     // TabsModule.forRoot(),
     PagesModule,
+
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // PaginationModule.forRoot(),
     // AlertModule.forRoot(),
     // BsDatepickerModule.forRoot(),

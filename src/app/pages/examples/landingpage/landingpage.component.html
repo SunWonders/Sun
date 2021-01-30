@@ -9,9 +9,15 @@
         class="navbar-brand"
         [routerLink]="['/home']"
         placement="bottom"
+        style="color: black;"
         tooltip="Designed and Coded by Creative Tim"
       >
-        <span> Sun </span> Wonders
+      <img
+      alt="Card image"
+      class="card-img"
+      src="assets/img/SunWonders.png" style="width:76px"
+    />
+        <!-- <span> Sun </span> Wonders -->
       </a>
       <button
         aria-controls="navigation-index"
@@ -34,7 +40,14 @@
     >
       <div class="navbar-collapse-header">
         <div class="row">
-          <div class="col-6 collapse-brand"><a> Sun </a></div>
+          <div class="col-6 collapse-brand">
+            <img
+            alt="Card image"
+            class="card-img"
+            src="assets/img/SunWonders.png" style="width:50px"
+          />
+            <!-- <a> Sun </a> -->
+          </div>
           <div class="col-6 collapse-close text-right">
             <button
               aria-controls="navigation-index"
@@ -52,9 +65,47 @@
       </div>
       <ul class="navbar-nav">
        
-       
-       
+        <li class="dropdown nav-item" dropdown>
+          <a
+            class="dropdown-toggle nav-link dropdown-toggle"
+            data-toggle="dropdown"
+            dropdownToggle
+            href="javascript:void(0)"
+          >
+          
+            <i class="tim-icons icon-bank"> </i>  Home
+          </a>
+          <div class="dropdown-menu dropdown-with-icons" *dropdownMenu>
+            <a
+              class="dropdown-item"
+              href="https://demos.creative-tim.com/blk-design-system-angular/#/documentation/overview"
+            >
+              <i class="tim-icons icon-paper"> </i> Products
+            </a>
+            <a class="dropdown-item" [routerLink]="['/register']">
+              <i class="tim-icons icon-heart-2"> </i> Contact Us
+            </a>
+            <a class="dropdown-item" [routerLink]="['/register']">
+              <i class="tim-icons icon-settings-gear-63"> </i> Profile
+            </a>
+            <!-- <a class="dropdown-item" [routerLink]="['/landing']">
+              <i class="tim-icons icon-image-02"> </i> Landing Page
+            </a>
+            <a class="dropdown-item" [routerLink]="['/profile']">
+              <i class="tim-icons icon-single-02"> </i> Profile Page
+            </a> -->
+          </div>
+        </li>
         <li class="nav-item">
+          <a
+            class="nav-link btn btn-default d-none d-lg-block"
+            href="javascript:void(0)"
+            (click)="scrollToDownload(target)"
+          >
+            <i class="tim-icons icon-spaceship"> </i> Upgrade to Pro
+          </a>
+        </li>
+        <!-- <li class="nav-item">
           Welcome Dilip
           <a
             class="nav-link"
@@ -62,7 +113,7 @@
           >
             Logout
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>
@@ -71,7 +122,7 @@
   <div class="page-header">
     <img class="path" src="assets/img/blob.png" />
 
-    <img class="path2" src="assets/img/path2.png" />
+    <img class="path2" src="assets/img/sun_white.png" />
 
     <img class="shapes triangle" src="assets/img/triunghiuri.png" />
 
@@ -271,7 +322,7 @@
     </div>
   </section> -->
   <footer class="footer">
-   <center>	&copy; 2021 by Sun Wonders </center> 
+   <!-- <center>	&copy; 2021 by Sun Wonders </center>  -->
     <!-- <div class="container">
       <div class="row">
         <div class="col-md-3"><h1 class="title">Sun Wonders</h1></div>

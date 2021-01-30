@@ -35,13 +35,15 @@
     >
       <div class="navbar-collapse-header">
         <div class="row">
-          <div class="col-6 collapse-brand"><a> Sun Wonders</a></div>
+          <div class="col-6 collapse-brand">
+           
+            <a> Sun Wonders</a></div>
           <div class="col-6 collapse-close text-right">
             <button
               aria-controls="navigation-index"
               aria-label="Toggle navigation"
               class="navbar-toggler"
-              [attr.aria-expanded]="!isCollapsed"
+              [attr.aria-expanded]="isCollapsed"
               (click)="isCollapsed = !isCollapsed"
               id="navigation"
               type="button"
@@ -243,6 +245,8 @@
   
   </div>
   <footer class="footer">
-    <center>	&copy; 2021 by Sun Wonders </center> 
+    <!-- <center> -->
+        &copy; 2021 by Sun Wonders 
+      <!-- </center>  -->
   </footer>
 </div>
