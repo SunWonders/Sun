@@ -2,10 +2,10 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 import noUiSlider from "nouislider";
 
 @Component({
-  selector: "app-index",
-  templateUrl: "index.component.html"
+  selector: "app-transfer-page",
+  templateUrl: "transfer.component.html"
 })
-export class IndexComponent implements OnInit, OnDestroy {
+export class TransferPageComponent implements OnInit, OnDestroy {
   isCollapsed = true;
   focus;
   focus1;
