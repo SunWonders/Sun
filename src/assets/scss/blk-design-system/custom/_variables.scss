@@ -95,7 +95,7 @@ $default-color-opacity: rgba(182, 182, 182, 0.6) !default;
 $orange-color: #f96332 !default;
 
 $default: #344675 !default;
-$primary: #ec250d !default;
+$primary: white !default;
 $secondary: #f4f5f7 !default;
 $success: #00f2c3 !default;
 $info: #1d8cf8 !default;
@@ -918,7 +918,7 @@ $card-columns-margin: $card-spacer-y !default;
 $tooltip-font-size: $font-size-sm !default;
 $tooltip-max-width: 200px !default;
 $tooltip-color: $black !default;
-$tooltip-bg: $white !default;
+$tooltip-bg:#65152f !default;
 $tooltip-border-radius: $border-radius !default;
 $tooltip-opacity: 0.9 !default;
 $tooltip-padding-y: 0.25rem !default;

@@ -12,7 +12,11 @@
         target="_blank"
         tooltip="Sun Wonders"
       >
-      <span> Sun </span> Wonders
+      <img
+      alt="Card image"
+      class="card-img"
+      src="assets/img/SunWonders.png" style="width:76px"
+    />
       </a>
       <button
         aria-controls="navigation-index"
@@ -37,7 +41,13 @@
         <div class="row">
           <div class="col-6 collapse-brand">
            
-            <a> Sun Wonders</a></div>
+            <img
+            alt="Card image"
+            class="card-img"
+            src="assets/img/SunWonders.png" style="width:50px"
+          />  
+          
+          </div>
           <div class="col-6 collapse-close text-right">
             <button
               aria-controls="navigation-index"
@@ -97,31 +107,34 @@
             dropdownToggle
             href="javascript:void(0)"
           >
-            <i class="fa fa-cogs d-lg-none d-xl-none"> </i> Welcome Dilip
+            <i class="fa fa-cogs d-lg-none d-xl-none"> </i> Sun Transfer
           </a>
-          <div class="dropdown-menu dropdown-with-icons" *dropdownMenu>
+          <div class="dropdown-menu icon-alert-circle-exc" *dropdownMenu>
             <a
               class="dropdown-item"
-              href="https://demos.creative-tim.com/blk-design-system-angular/#/documentation/overview"
+              [routerLink]="['/landing']"
             >
-              <i class="tim-icons icon-paper"> </i> Documentation
+              <i class="tim-icons icon-bank"> </i> Home
             </a>
-            <a class="dropdown-item" [routerLink]="['/register']">
-              <i class="tim-icons icon-bullet-list-67"> </i> Register Page
+            <a
+              class="dropdown-item"
+              [routerLink]="['/products']"
+            >
+              <i class="tim-icons icon-paper"> </i> Products
             </a>
-            <a class="dropdown-item" [routerLink]="['/landing']">
-              <i class="tim-icons icon-image-02"> </i> Landing Page
+            <a class="dropdown-item" [routerLink]="['/contact']">
+              <i class="tim-icons icon-heart-2"> </i> Contact Us
             </a>
             <a class="dropdown-item" [routerLink]="['/profile']">
-              <i class="tim-icons icon-single-02"> </i> Profile Page
+              <i class="tim-icons icon-settings-gear-63"> </i> Profile
             </a>
           </div>
         </li>
         <li class="nav-item">
           <a
             class="nav-link btn btn-default d-none d-lg-block"
-            href="javascript:void(0)"
-            (click)="scrollToDownload(target)"
+            [routerLink]="['/register']"
+            
           >
             <i class="tim-icons icon-cloud-download-93"> </i> Upgrade to Pro
           </a>
@@ -202,19 +215,25 @@
                       type="text"
                     />
                   </div>
-                  <div class="input-group">
+                  <div class="custom-file mb-3">
+                    
+                    <input type="file" class="custom-file-input" id="customFile" name="filename">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
+                  <!-- <input
+                  class="form-control"
+                  placeholder="File"
+                  type="file" (change)="UploadFile($event)" name="file"
+                /> -->
+                  <!-- <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
                         <i class="tim-icons icon-cloud-upload-94"> </i>
                       </div>
                     </div>
-                    <input
-                      class="form-control"
-                      placeholder="File"
-                      type="file" (change)="UploadFile($event)" name="file"
-                    />
-                  </div>
-                  <div class="form-check text-left">
+                   
+                  </div> -->
+                  <!-- <div class="form-check text-left">
                     {{shortURL}}
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" />
@@ -222,17 +241,19 @@
                       <span class="form-check-sign"> </span> I agree to the
                       <a href="javascript:void(0)"> terms and conditions </a> .
                     </label>
+                  </div> -->
+                  <div class="input-group">
+                    <button
+                      class="btn btn-danger btn-round btn-lg"
+                      (click)="onSubmit()"
+                    >
+                    <i class="tim-icons icon-cloud-upload-94"> </i>
+                      &nbsp;Upload
+                  </button>
                   </div>
                 </form>
               </div>
-              <div class="card-footer">
-                <button
-                  class="btn btn-danger btn-round btn-lg"
-                  (click)="onSubmit()"
-                >
-                  Upload
-              </button>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -244,9 +265,9 @@
    
   
   </div>
-  <footer class="footer">
-    <!-- <center> -->
-        &copy; 2021 by Sun Wonders 
-      <!-- </center>  -->
+  <footer class="footer" style="display: block;bottom: 0;left: 0;right: 0;height: 50px;width: 100%;display: flex;justify-content: center;">
+    
+    &copy; 2021 by Sun Wonders  &nbsp;&nbsp;
+    <img src="https://seal.godaddy.com/images/3/en/siteseal_gd_3_h_d_m.gif"> 
   </footer>
 </div>

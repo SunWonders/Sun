@@ -17,11 +17,15 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
 
-import { IndexComponent } from "./index/index.component";
-import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
-import { ContactpageComponent } from "./examples/contactpage/contactpage.component";
+import { TransferPageComponent } from "./component/transferpage/transfer.component";
+import { ProfilepageComponent } from "./component/profilepage/profilepage.component";
+import { RegisterpageComponent } from "./component/registerpage/registerpage.component";
+import { LandingpageComponent } from "./component/landingpage/landingpage.component";
+import { ContactpageComponent } from "./component/contactpage/contactpage.component";
+import { ProductspageComponent } from './component/productspage/productspage.component';
+import { LoginpageComponent } from './component/loginpage/loginpage.component';
+import { PlanspageComponent } from './component/planspage/planspage.component';
+
 
 
 @NgModule({
@@ -44,14 +48,17 @@ import { ContactpageComponent } from "./examples/contactpage/contactpage.compone
     ModalModule.forRoot()
   ],
   declarations: [
-    IndexComponent,
+    TransferPageComponent,
     ProfilepageComponent,
     RegisterpageComponent,
     LandingpageComponent,
-    ContactpageComponent
+    ContactpageComponent,
+    ProductspageComponent,
+    LoginpageComponent,
+    PlanspageComponent,
   ],
   exports: [
-    IndexComponent,
+    TransferPageComponent,
     ProfilepageComponent,
     RegisterpageComponent,
     LandingpageComponent
