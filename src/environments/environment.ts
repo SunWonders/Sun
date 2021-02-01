@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  fileUploadURL:""
+  fileUploadURL:'http://api.aeiou.co.in:81/v1/upload',
+
 };
 
 /*

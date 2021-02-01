@@ -190,7 +190,7 @@
                 <h4 class="card-title">Transfer</h4>
               </div>
               <div class="card-body">
-                <form class="form" enctype="multipart/form-data">
+                <form method="post" class="form" enctype="multipart/form-data">
                   <!-- <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -213,11 +213,13 @@
                       class="form-control"
                       placeholder="Email"
                       type="text"
+                      name="email"
+                      [(ngModel)]="emailId"
                     />
                   </div>
                   <div class="custom-file mb-3">
                     
-                    <input type="file" class="custom-file-input" id="customFile" name="filename">
+                    <input type="file" class="form-control" id="customFile"  name="file" (change)="UploadFile($event)">
                     <label class="custom-file-label" for="customFile">Choose file</label>
                   </div>
                   <!-- <input
@@ -245,7 +247,7 @@
                   <div class="input-group">
                     <button
                       class="btn btn-danger btn-round btn-lg"
-                      (click)="onSubmit()"
+                      value="Upload"  id="uploadFile"   (click)="onSubmit()"
                     >
                     <i class="tim-icons icon-cloud-upload-94"> </i>
                       &nbsp;Upload
