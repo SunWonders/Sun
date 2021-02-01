@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { PagesModule } from "./pages/pages.module";
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -39,6 +39,7 @@ import { PagesModule } from "./pages/pages.module";
     // BsDatepickerModule.forRoot(),
     // CarouselModule.forRoot(),
     // ModalModule.forRoot()
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

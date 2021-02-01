@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import noUiSlider from "nouislider";
-
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { TransferService} from './transfer.service';
 @Component({
   selector: "app-transfer-page",
   templateUrl: "transfer.component.html"
@@ -15,13 +16,45 @@ export class TransferPageComponent implements OnInit, OnDestroy {
   pagination1 = 1;
   target:any;
   shortURL:any;
-  constructor() {}
-  UploadFile(data:any){
+  uploadForm: FormGroup;
+  formdata = new FormData();
+  filelength:any;
+  emailId:any;
+
+  constructor(private formBuilder: FormBuilder,
+    private TransferService: TransferService,) {}
+
+  
+  /**
+ * @author madhusudhan.l
+ * @description file upload 
+ * @param filedata,emailId
+ * 
+ * 
+ */
+  UploadFile(event){
+    this.filelength=event.target.files.length;
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.uploadForm.get('profile').setValue(file);
+    }
 
   }
 
   onSubmit(){
-    
+    const formData = new FormData();
+    formData.append('file', this.uploadForm.get('profile').value);
+    formData.append('emailId', this.emailId);
+    if(this.filelength > 0){
+      this.TransferService.fileUpload(formData).subscribe((res) => {
+        console.log(res);
+        if (res.status === 200){
+          this.shortURL=res.shortUrl;    
+          alert("Short URL: "+this.shortURL);
+        }      }, (err) => {
+        alert("error")
+      });
+    }
   }
   
   scrollToDownload(element: any) {
@@ -32,6 +65,10 @@ export class TransferPageComponent implements OnInit, OnDestroy {
     body.classList.add("index-page");
 
     var slider = document.getElementById("sliderRegular");
+
+    this.uploadForm = this.formBuilder.group({
+      profile: ['']
+    });
 
     // noUiSlider.create(slider, {
     //   start: 40,
